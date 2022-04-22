@@ -11,10 +11,12 @@ node {
       sh "pwd"
   }
   stage('SonarQube Analysis') {
+        dir('./shopping-cart/shopping-cart-scala') {
     def scannerHome = tool 'SonarScanner';
       sh "pwd"
     withSonarQubeEnv() {
       sh "${scannerHome}/bin/sonar-scanner"
     }
+  }
   }
 }
