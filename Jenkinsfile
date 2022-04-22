@@ -19,10 +19,7 @@ node {
   -Dsonar.projectKey=lagom-sonar \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9002/sonarqube \
-  -Dsonar.login=6766834c610f233898a2c035364ed28e33b390c1 \
-  -Dsonar.github.repository=vivekmishra91test/lagom-samples \
-  -Dsonar.github.login=vivekmishra91test \
-  -Dsonar.github.oauth=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"
+  -Dsonar.login=6766834c610f233898a2c035364ed28e33b390c1"
     }
   }
   }
