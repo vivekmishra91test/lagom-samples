@@ -14,7 +14,7 @@ node {
         dir('./shopping-cart/shopping-cart-scala') {
     def scannerHome = tool 'SonarScanner';
       sh "pwd"
-    withSonarQubeEnv() {
+    withSonarQubeEnv('lagom-sonar') {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
