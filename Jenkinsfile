@@ -15,7 +15,11 @@ node {
     def scannerHome = tool 'SonarScanner';
       sh "pwd"
     withSonarQubeEnv('lagom-sonar') {
-      sh "${scannerHome}/bin/sonar-scanner"
+      sh "${scannerHome}/bin/sonar-scanner \
+  -Dsonar.projectKey=lagom-sonar \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9002/sonarqube \
+  -Dsonar.login=6766834c610f233898a2c035364ed28e33b390c1"
     }
   }
   }
